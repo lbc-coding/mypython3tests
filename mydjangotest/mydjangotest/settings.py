@@ -120,13 +120,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+# 添加静态资源路由信息
 STATIC_URL = '/Allstatic/'
 # 添加所有静态资源路径
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), os.path.join(BASE_DIR, 'index/Mystatic'), ]
 # 设置服务器静态资源映射
-STATIC_ROOT = os.path.join(BASE_DIR, 'Allstatic')
+STATIC_ROOT = os.path.join(BASE_DIR, 'Allstatic')   #当DUBUG为False时,需使用Django的collectstatic指令来收集所有静态资源放在Allstatic文件夹下
 
 # 添加媒体资源路由信息
 MEDIA_URL = '/media/'
 # 获取media完整路径信息
-MEDIA_URL = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
